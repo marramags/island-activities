@@ -8,10 +8,15 @@ function activitiesIndex (req, res){
 }
 
 function newActivity (req, res) {
-    res.render('activities/new');
+    res.render('activities/new', {title: 'Add Activity'});
+}
+
+function addActivity (req, res) {
+
 }
 
 module.exports = {
     activitiesIndex,
-    newActivity
+    newActivity,
+    addActivity
 }
