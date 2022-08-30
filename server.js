@@ -32,7 +32,12 @@ app.use(session({
 }));
 app.use(passport.initialize());
 app.use(passport.session());
-app.use(methodOverride('_method'));
+app.use(function (req, res, next) { //Oauth - Pass req.user to All Views via res.locals & Middleware
+  res.locals.user = req.user;
+  next();
+});
+
+app.use(methodOverride('_method')); //mounting methodOverride
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);

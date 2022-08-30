@@ -10,6 +10,6 @@ router.get('/new', activitiesCtrl.newActivity) // viewing form for add new activ
 
 router.post('/', activitiesCtrl.addActivity) //CREATE: add new activity
 
-router.get('/:id', activitiesCtrl.seeMore) //more details on each activity
+router.get('/:id', activitiesCtrl.seeMore) //SHOW more details on each activity
 
 module.exports = router;
