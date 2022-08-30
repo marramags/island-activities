@@ -16,6 +16,10 @@
                 <td><%= a.location%></td>
                 <td><%= a.activityType%></td>
                 <td><a href="/activities/<%=a.id%>">See More</a></td>
+                <td>
+                    <form action="/activities/<%=a.id%>?_method=DELETE" method="POST">
+                        <button type="submit">X</button>
+                    </form></td>
             </tr>
             <% }); %>
     </tbody>

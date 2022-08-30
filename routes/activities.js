@@ -12,4 +12,8 @@ router.post('/', activitiesCtrl.addActivity) //CREATE: add new activity
 
 router.get('/:id', activitiesCtrl.seeMore) //SHOW more details on each activity
 
+// http://localhost:3000/activities/delete	
+router.delete('/:id', activitiesCtrl.deleteActivity)	
+	
+
 module.exports = router;

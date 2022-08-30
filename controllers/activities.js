@@ -25,9 +25,16 @@ function seeMore(req, res) { //more details on each activity
     })
 }
 
+function deleteActivity (req, res) {
+    Activity.findByIdAndDelete(req.params.id, function(err, activity) { //finding activity by id to remove
+        res.redirect('/activities') //redirecting to activities index.ejs page
+    })
+}
+
 module.exports = {
     activitiesIndex,
     newActivity,
     addActivity,
-    seeMore
+    seeMore,
+    deleteActivity
 }
