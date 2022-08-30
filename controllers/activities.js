@@ -12,6 +12,19 @@ function newActivity (req, res) {
 }
 
 function addActivity (req, res) {
+    const activity = new Activity (req.body);
+    activity.save(function(err){
+        if (err) return res.render('flights/new');
+        console.log(activity);
+        res.redirect('/activities')
+    })
+    // Activity.create({
+    //     activityName: req.body.activityName,
+    //     description: req.body.description,
+    //     kidFriendly: {type: Boolean, default: false},
+    //     typeOfActivity: req.body.typeOfActivity,
+    //     location: req.body.location
+    // })
 
 }
 
