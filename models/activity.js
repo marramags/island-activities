@@ -6,7 +6,7 @@ const activitiesSchema = new Schema ({
     activityName: String,
     description: String,
     // kidFriendly: {type: Boolean, default: false},
-    typeOfActivity: String,
+    activityType: String,
     location: String,
 })
 

@@ -10,4 +10,6 @@ router.get('/new', activitiesCtrl.newActivity) //add new activity
 
 router.post('/', activitiesCtrl.addActivity)
 
+router.get('/:id', activitiesCtrl.seeMore)
+
 module.exports = router;

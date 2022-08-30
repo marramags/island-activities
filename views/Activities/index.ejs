@@ -1,4 +1,27 @@
 <%- include('../partials/header')%>
 <h1> Activities List</h1>
+<table>
+    <thead>
+        <th>Activity</th>
+        <th>Description</th>
+        <th>Location</th>
+        <th>Activity Type</th>
+    </thead>
+
+    <tbody>
+        <% activities.forEach(function(a) {%>
+            <tr>
+                <td><%= a.activityName%></td>
+                <td><%= a.description%></td>
+                <td><%= a.location%></td>
+                <td><%= a.activityType%></td>
+                <td><a href="/activities/<%=a.id%>">See More</a></td>
+            </tr>
+            <% }); %>
+    </tbody>
+
+</table>
+
+
 <a href="/activities/new">add new activity</a>
 <%- include('../partials/footer')%>
