@@ -1,5 +1,9 @@
 const Activity = require('../models/activity')
 
+function newReview (req, res) {
+    res.render('activities/addreview', {title: 'Add Review'});
+}
+
 function addReview (req, res) { //create
     Activity.findById(req.params.id, function (err, activity){
         req.body.user = req.user._id;
@@ -13,5 +17,6 @@ function addReview (req, res) { //create
 }
 
 module.exports = {
+    newReview,
     addReview
 }

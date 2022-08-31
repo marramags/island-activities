@@ -14,7 +14,8 @@
 </br></br>
 <h2>Reviews</h2>
 
-    <form>
+<%if (user) {%>
+    <form >
         <label>Review:</label>
         <textarea name="content"></textarea>
         <label>Rating:</label>
@@ -27,6 +28,8 @@
         </select>
         <input type="submit" value="Add Review">
     </form>
+<%}%>
+
 
 
 
