@@ -35,6 +35,7 @@
         <thead>
             <tr>
                 <th>User</th>
+                <th>Date</th>
                 <th>Review</th>
                 <th>Rating</th>
             </tr>
@@ -42,7 +43,7 @@
         <tbody>
             <% activity.reviews.forEach(function(a) { %>
                 <tr>
-                    <td><%= a.userName %></td>
+                    <td><img src="<%= a.userAvatar %>"><%= a.userName %></td>
                     <td><%= a.createdAt.toLocaleDateString() %></td>
                     <td><%= a.content%></td>
                     <td><%= a.rating%></td>
@@ -55,7 +56,6 @@
 <% } else { %>
 <h4>No Reviews Yet</h4>
 <% } %>
-
 
 
 
