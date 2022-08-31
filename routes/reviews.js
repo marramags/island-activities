@@ -3,7 +3,7 @@ var router = express.Router();
 const reviewsCtrl = require('../controllers/reviews');
 
 // http://localhost:3000/activities/12345/newReview	
-router.get('/activities/:id/reviews', reviewsCtrl.newReview)	
+// router.get('/activities/:id/reviews', reviewsCtrl.newReview)	
 	
 
 

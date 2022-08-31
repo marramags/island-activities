@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 
 // defining the schema for User model
 const userSchema = new Schema({
-    Name: String,
+    name: String,
     googleId: { 
         type: String,
         required: true

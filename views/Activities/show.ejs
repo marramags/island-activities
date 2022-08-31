@@ -14,8 +14,8 @@
 </br></br>
 <h2>Reviews</h2>
 
-<%if (user) {%>
-    <form >
+
+    <form action="/activites/<%=activity.id%>/reviews" method="POST">
         <label>Review:</label>
         <textarea name="content"></textarea>
         <label>Rating:</label>
@@ -28,7 +28,33 @@
         </select>
         <input type="submit" value="Add Review">
     </form>
-<%}%>
+
+
+<%if (activity.reviews.length) { %>
+    <table>
+        <thead>
+            <tr>
+                <th>User</th>
+                <th>Review</th>
+                <th>Rating</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% activity.reviews.forEach(function(a) { %>
+                <tr>
+                    <td><%= a.userName %></td>
+                    <td><%= a.reviewContent%></td>
+                    <td><%= a.rating%></td>
+                </tr>
+
+<% })  %>
+        </tbody>
+    </table>
+
+<% } else { %>
+<h4>No Reviews Yet</h4>
+<% } %>
+
 
 
 
