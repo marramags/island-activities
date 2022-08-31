@@ -3,7 +3,7 @@ const mongood = require('mongoose');
 const Schema = mongoose.Schema;
 
 const reviewsSchema = new Schema ({
-    reviewContent: {type: String, required: true},
+    review: {type: String, required: true},
     name: String,
     rating: {type: Number, min: 1, max: 5},
     userId: {type: Schema.Types.ObjectId, ref: 'User'},
