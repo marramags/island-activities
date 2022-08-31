@@ -1,4 +1,5 @@
 const Activity = require('../models/activity');
+const { render } = require('../server');
 
 function activitiesIndex (req, res){ //INDEX method function: all added activities
     Activity.find({}, function(err, activities){
@@ -31,10 +32,29 @@ function deleteActivity (req, res) {
     })
 }
 
+function editActivity (req, res) {
+    // res.render('activities/editActivities', {
+    //     activity: Activity.findByIdAndUpdate(req.params.id)
+    // })
+    Activity.findOne({_id: req.params.id,  activityName : req.user._id}, function(err,activity){
+        if (err || !activity) return res.redirect('/activities');
+        res.render('/activities/:id/editActivities', {activity});
+
+    });
+
+}
+
+function updateActivity(req,res){
+
+}
+
 module.exports = {
     activitiesIndex,
     newActivity,
     addActivity,
     seeMore,
-    deleteActivity
+    deleteActivity,
+    editActivity,
+    updateActivity
+    
 }

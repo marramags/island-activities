@@ -9,6 +9,8 @@
 </br>  
     <div>Type</div>
     <div><%= activity.activityType%></div>
+    <a href="/activities/<%= activity.id %>/editActivities">Edit</a>
+
 </section>
 
 </br></br>
@@ -47,6 +49,7 @@
                     <td><%= a.createdAt.toLocaleDateString() %></td>
                     <td><%= a.content%></td>
                     <td><%= a.rating%></td>
+                    <td><a href="/<%= activity.id %>/reviews/editReview">Edit</a></td>
                 </tr>
 
 <% })  %>
