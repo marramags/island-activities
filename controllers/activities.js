@@ -48,6 +48,7 @@ function updateActivity(req,res){
         {_id: req.params.id},
         // update object with updated properties
         req.body,
+        console.log("req.body>>>", req.body),
         // options object with new: true to make sure updated doc is returned
         {new: true},
         function(err, activity) {
