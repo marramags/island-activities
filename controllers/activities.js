@@ -36,15 +36,25 @@ function editActivity (req, res) {
     // res.render('activities/editActivities', {
     //     activity: Activity.findByIdAndUpdate(req.params.id)
     // })
-    Activity.findOne({_id: req.params.id}, function(err,activity){
+    Activity.findOne({_id: req.params.id}, function(err, activity){
         if (err || !activity) return res.redirect('/activities');
-        res.render('/activities/edit', {activity});
+        res.render('activities/editActivities', {title: "Edit Activity", activity});
     });
 
 }
 
 function updateActivity(req,res){
-
+    Activity.findOneAndUpdate(
+        {_id: req.params.id},
+        // update object with updated properties
+        req.body,
+        // options object with new: true to make sure updated doc is returned
+        {new: true},
+        function(err, activity) {
+          if (err || !activity) return res.redirect('/activity');
+          res.redirect(`/activities/${activity._id}`);
+        }
+      );
 }
 
 module.exports = {

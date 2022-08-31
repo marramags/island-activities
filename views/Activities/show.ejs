@@ -9,8 +9,9 @@
 </br>  
     <div>Type</div>
     <div><%= activity.activityType%></div>
-    <a href="/activitities/<%= activity.id %>/edit">Edit</a>
-
+    <form action="/activities/<%= activity.id %>/editActivities" method="GET">
+    <button type="submit">Edit</button>
+</form>
 </section>
 
 </br></br>

@@ -26,6 +26,11 @@ function addReview (req, res) { //create
 //         res.render('./activities/editReview', {title: 'edit review', review, activity})
 //     })
 //     }
+    // Activity.findOne({'reviews._id': req.params.id}, function(err, activity) {
+    //     const review = activity.reviews.id(req.params.id);
+    //     res.render('reviews/edit', {review})
+    // })
+// }
 
 
 module.exports = {
