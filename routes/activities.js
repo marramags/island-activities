@@ -16,7 +16,7 @@ router.get('/:id', activitiesCtrl.seeMore) //SHOW more details on each activity
 router.delete('/:id', activitiesCtrl.deleteActivity)	
 
 // http://localhost:3000/activities/12345/edit
-router.get('/:id/editActivities', activitiesCtrl.editActivity)	
+router.get('/:id/edit', activitiesCtrl.editActivity)	
 router.put('/:id', activitiesCtrl.updateActivity)	
 	
 	

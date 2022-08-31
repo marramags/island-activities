@@ -36,10 +36,9 @@ function editActivity (req, res) {
     // res.render('activities/editActivities', {
     //     activity: Activity.findByIdAndUpdate(req.params.id)
     // })
-    Activity.findOne({_id: req.params.id,  activityName : req.user._id}, function(err,activity){
+    Activity.findOne({_id: req.params.id}, function(err,activity){
         if (err || !activity) return res.redirect('/activities');
-        res.render('/activities/:id/editActivities', {activity});
-
+        res.render('/activities/edit', {activity});
     });
 
 }
