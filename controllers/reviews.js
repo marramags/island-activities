@@ -24,7 +24,7 @@ function editReview (req, res, next) {
     .then(function(activity){
         const review = activity.reviews.id(req.params.id);
         console.log(review);
-        res.render('/activities/editReview', {title: 'edit review', activity, review})
+        res.render('activities/editReview', {title: 'edit review', activity, review})
     }).catch(function (err){
         return next (err);
     })
