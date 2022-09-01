@@ -1,7 +1,7 @@
 <%- include('../partials/header')%>
 <h1>Edit Review</h1>
 
-<form action="/activities/<%=activity.id%>/reviews?_method=PUT" method="POST">
+<form action="/activities/<%=activity.id%>/?_method=PUT" method="POST">
     <label>Review:</label>
     <textarea name="content"></textarea>
     <label>Rating:</label>

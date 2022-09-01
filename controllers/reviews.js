@@ -36,11 +36,11 @@ function editReview (req, res, next) {
 // }
 
 function updateReview (req, res, next) {
-    Activity.findOne({'reviews._id' : req.params.id}).then(function(activity){
+    Activity.findOne({'reviews._id': req.params.id}).then(function(activity){
         const review = activity.reviews.id(req.params.id);
         review.body = req.body.review;
         activity.save().then(function (){
-            res.direct(`/activities/${review._id}/editReview`)
+            res.direct(`/activities/${review._id}`)
         }).catch(function(err){
             return next (err);
         })

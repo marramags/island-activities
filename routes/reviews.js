@@ -13,7 +13,7 @@ router.post('/activities/:id/reviews', reviewsCtrl.addReview); //adding a review
 // http://localhost:3000/activities/12345/	
 router.get('/activities/:id/editReview', reviewsCtrl.editReview); //update view page route
 
-router.put('/:id', reviewsCtrl.updateReview)	
+router.put('/activities/:id/reviews', reviewsCtrl.updateReview)	
 	
 
 module.exports = router;

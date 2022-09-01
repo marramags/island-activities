@@ -11,3 +11,17 @@
     <button type="submit">Edit</button>
 </form>
 </section>
+
+update review function option 2
+<!-- // function updateReview (req, res) {
+//     Activity.findOne({'reviews._id': req.params.id}, function(err, activity){
+//         const review = activity.reviews.id(req.params.id);
+//         if(!review.userId.equals(req.user.id)) return res.redirect(`/activiites/${activity._id}`);
+//         review.text= req.body.text;
+//         activity.save(function(err){
+//             res.redirect(`/activities/${activity._id}`)
+//         })
+//     })
+        
+// }
+ -->
