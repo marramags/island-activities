@@ -10,3 +10,14 @@ a {
 .login img {
   height: 30px;
 }
+
+.review-info img {
+  border-radius: 50%;
+  height: 40px;
+}
+
+.review-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

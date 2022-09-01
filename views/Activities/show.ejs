@@ -44,9 +44,11 @@
             </tr>
         </thead>
         <tbody>
+            <% let total = 0 %>
             <% activity.reviews.forEach(function(a) { %>
+                <% total += a.rating %>
                 <tr>
-                    <td><img src="<%= a.userAvatar %>"><%= a.userName %></td>
+                    <td class="review-info"><img src="<%= a.userAvatar %>"><%= a.userName %></td>
                     <td><%= a.createdAt.toLocaleDateString() %></td>
                     <td><%= a.content%></td>
                     <td><%= a.rating%></td>
@@ -54,6 +56,10 @@
                 </tr>
 
 <% })  %>
+<tr>
+    <td colspan="3"></td>
+      <td><strong><%= (total / activity.reviews.length).toFixed(1) %></strong></td>
+</tr>
         </tbody>
     </table>
 
