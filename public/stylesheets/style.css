@@ -14,7 +14,9 @@ body {
 .nav-link {
   color: white;
   text-decoration: none;
-  text-align: right;
+  flex:1 1 200px;
+
+
 }
 
 .login img {
