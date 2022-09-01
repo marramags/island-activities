@@ -9,8 +9,8 @@
 </br>  
     <div>Type</div>
     <div><%= activity.activityType%></div>
-    <form action="/activities/<%= activity.id %>/editA" method="GET">
-    <button type="submit">Edit</button>
+ 
+     <a href="/activities/<%= activity.id %>/editA">Edit</a>
 </form>
 </section>
 
@@ -54,15 +54,14 @@
                     <td><%= a.rating%></td>
                     <td>
                         <% if (user && user._id.equals(a.user)) { %>
-                        <form action="/activities/<%= activity.id %>/editReview" method="GET">
-                            <button type="submit">Edit</button>
-                        </form>   
+                        <a href="/activities/<%= activity.id %>/editReview">Edit</a>
+                     
                         <% } %>
                     </td>
                     <td>
                         <% if (user && user._id.equals(a.user)) { %>
                           <form action="/reviews/<%= a._id %>?_method=DELETE" method="POST">
-                            <button type="submit">X</button>
+                             <type="submit">X</button>
                           </form>
                         <% } %>
                       </td>

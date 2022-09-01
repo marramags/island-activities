@@ -32,42 +32,63 @@ function deleteActivity (req, res) {
     })
 }
 
+// function editActivity (req, res) { //Original
+//     // res.render('activities/editActivities', {
+//     //     activity: Activity.findByIdAndUpdate(req.params.id)
+//     // })
+//     console.log(req.query)
+//     Activity.findOne({_id: req.params.id}, function(err, activity){
+//         if (err || !activity) return res.redirect('/activities');
+//         res.render('activities/editA', {title: "Edit Activity", activity});
+//     });
+
+// }
+
+// function editActivity (req, res) {
+//     // console.log("calling editActivity");
+//     // console.log(req.query);
+//     Activity.findOne({_id: req.params.id}, function(err, activity){
+//         if (err || !activity) return res.redirect('/activities');
+//         res.render('activities/editA', {title: "Edit Activity", activity});
+//     });
+// }
+
 function editActivity (req, res) {
-    // res.render('activities/editActivities', {
-    //     activity: Activity.findByIdAndUpdate(req.params.id)
-    // })
-    Activity.findOne({_id: req.params.id}, function(err, activity){
-        if (err || !activity) return res.redirect('/activities');
-        res.render('activities/editA', {title: "Edit Activity", activity});
-    });
+        Activity.findById(req.params.id, function(err, activity){
+            // if (err || !activity) return res.redirect('/activities');
+            res.render('activities/editA', {title: "Edit Activity", activity});
+        });
+    }
 
-}
+function updateActivity(req, res){  //OG function
+    // console.log(req.query)
+    // Activity.findOneAndUpdate(
+    //     {_id: req.params.id}, //criteria
+    //     req.body,
+    //     {new: true}),
+    //     // console.log("update done!")
+    //     function(err, activity) {
+    //     console.log(activity)
+    //       if (err || !activity) return console.log(err);
+    //       res.redirect(`/activities/${activity._id}`);
+    //     }
 
-function updateActivity(req, res){
-    console.log(req.body)
-    Activity.findOneAndUpdate(
-        {_id: req.params.id}, //criteria
-        req.body,
-        {new: true}),
-        // console.log("update done!")
-        function(err, activity) {
-        console.log(activity)
-          if (err || !activity) return console.log(err);
-          res.redirect(`/activities/${activity._id}`);
-        }
-
-
+// function updateActivity(req, res){
+//     Activity.findById(req.params.id, function(err, activity) {
+//         activity.update(req.body, function (err, dive) {
+//             if (err) return res.redirect('/activities')
+//         })
+//           res.redirect('/activities');
+//         })
+    
 
 
     // const selectedActivity = req.activity;
-    // Activity.findByIdAndUpdate(selectedActivity._id, {activity: req.body.activity},
-    //     function(err, updatedActivity){
-    //         if (err) {
-    //             console.log(err)
-    //         } else {
-    //             console.log('updated user>>>>>>>', updatedActivity)
-    //         }
-    //     })
+    Activity.findByIdAndUpdate(req.params.id, req.body,  function(err, activity){
+       console.log(req.body)
+        res.redirect('/activities');
+            }
+        )
 }
 
 

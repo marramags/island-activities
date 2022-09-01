@@ -23,7 +23,9 @@ router.delete('/:id', activitiesCtrl.deleteActivity)
 router.get('/:id/editA', activitiesCtrl.editActivity)	
 
 // http://localhost:3000/activities/12345
-router.put('/:id', activitiesCtrl.updateActivity)	//edit a single activity - updates activity
+router.put('/:id/editA', activitiesCtrl.updateActivity)	//edit a single activity - updates activity
+
+
 	
 	
 

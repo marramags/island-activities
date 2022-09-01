@@ -21,31 +21,42 @@ function addReview (req, res) { //create a review
 }
 
 function editReview (req, res, next) {
-   Activity.findOne({'reviews.id': req.params.id})
-    .then(function(activity){
-        const review = activity.reviews.id(req.params.id);
-        console.log(review);
-        res.render('activities/editReview', {title: 'edit review', activity, review})
-    }).catch(function (err){
-        return next (err);
-    })
-    }
+//    Activity.findOne({'reviews.id': req.params.id})
+//     .then(function(activity){
+//         const review = activity.reviews.id(req.params.id);
+//         console.log(review);
+//         res.render('activities/editReview', {title: 'edit review', activity, review})
+//     }).catch(function (err){
+//         return next (err);
+//     })
+//     }
+
 //     Activity.findOne({'reviews._id': req.params.id}, function(err, activity) {
 //         const review = activity.reviews.id(req.params.id);
 //         res.render('/activities/editReview', {title: "Edit Review", review})
 //     })
-// }
+    Activity.findOne({'review': req.review}, function (err, review){
+        res.render('activities/editReview', {title: 'Edit Review', review})
+    })
+
+}
 
 function updateReview (req, res, next) {
-    Activity.findOne({'reviews._id': req.params.id}).then(function(activity){
-        const review = activity.reviews.id(req.params.id);
-        review.body = req.body.review;
-        activity.save().then(function (){
-            res.direct(`/activities/${review.id}`)
-        }).catch(function(err){
-            return next (err);
-        })
-    })
+    // Activity.findOne({'reviews._id': req.params.id})
+    // .then(function(activity){
+    //     const review = activity.reviews.id(req.params.id);
+    //     review.body = req.body.review;
+    //     activity.save().then(function (){
+    //     res.direct(`/activities/${review.id}`)
+    //     }).catch(function(err){
+    //         return next (err);
+    //     })
+    // })
+        Activity.findByIdAndUpdate(req.params.id, req.body, function(err, activity){
+            console.log(activity)
+            res.redirect(`/activities/${activity._id}`);
+        });
+
 }
 
 
