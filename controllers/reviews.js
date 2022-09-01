@@ -40,7 +40,7 @@ function updateReview (req, res, next) {
         const review = activity.reviews.id(req.params.id);
         review.body = req.body.review;
         activity.save().then(function (){
-            res.direct(`/activities/${review._id}`)
+            res.direct(`/activities/${review.id}`)
         }).catch(function(err){
             return next (err);
         })
