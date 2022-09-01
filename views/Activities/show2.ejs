@@ -1,17 +1,27 @@
 <%- include('../partials/header')%>
 <h1><%=activity.activityName%></h1>
 <section>
-    <div>Description</div>
-    <div><%= activity.description%></div>
-</br>   
-    <div>Location:</div>
-    <div><%= activity.location%></div>
-</br>  
-    <div>Type</div>
-    <div><%= activity.activityType%></div>
-    <form action="/activities/<%= activity.id %>/editActivities" method="GET">
+<table>
+    <thead>
+        <tr>
+            <th>Description</th>
+            <th>Location</th>
+            <th>Type</th>
+        </tr>
+    </thead>
+<tbody>
+    <tr>
+        <td><%= activity.description%></td>
+        <td><%= activity.location%></td>
+        <td><%= activity.activityType%></td>
+    </tr>
+</tbody>
+
+</table>
+<form action="/activities/<%= activity.id %>/editActivities" method="GET">
     <button type="submit">Edit</button>
 </form>
+
 </section>
 
 </br></br>
@@ -50,7 +60,7 @@
                     <td><%= a.createdAt.toLocaleDateString() %></td>
                     <td><%= a.content%></td>
                     <td><%= a.rating%></td>
-                    <td><form action="/activities/<%= activity.id %>/editReview" method="GET"><button type="submit">Edit</button></form></td>
+                    <td><a href="/activities/<%= activity.id %>/editReview">Edit</a></td>
                 </tr>
 
 <% })  %>

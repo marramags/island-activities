@@ -45,14 +45,11 @@ function editActivity (req, res) {
 
 function updateActivity(req,res){
     Activity.findOneAndUpdate(
-        {_id: req.params.id},
-        // update object with updated properties
+        {_id: req.params.id}, 
         req.body,
-        console.log("req.body>>>", req.body),
-        // options object with new: true to make sure updated doc is returned
         {new: true},
         function(err, activity) {
-          if (err || !activity) return res.redirect('/activity');
+          if (err || !activity) return res.redirect('/activities');
           res.redirect(`/activities/${activity._id}`);
         }
       );
