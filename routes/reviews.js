@@ -14,6 +14,8 @@ router.post('/activities/:id/reviews', reviewsCtrl.addReview); //adding a review
 router.get('/activities/:id/editReview', reviewsCtrl.editReview); //update view page route
 
 router.put('/activities/:id/reviews', reviewsCtrl.updateReview)	
+
+// router.delete('/:id', reviewsCtrl.deleteReview);
 	
 
 module.exports = router;

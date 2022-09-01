@@ -25,3 +25,17 @@ update review function option 2
         
 // }
  -->
+
+ icebox: delete option for user review 
+ function deleteReview(req, res, next) {
+    Activity.findOne({'reviews._id}': req.params.id}).then(function(movie){
+        const review = activity.reviews.id(req.params.id);
+        if (!review.user.equals(req.user._id)) return res.redirect(`/movies/${movie._id}`);
+        review.remove();
+        activity.save().then(function(){
+            res.redirect(`/activities/${movie._id}`);
+        }).catch(function(err) {
+            return next(err);
+        })
+    })
+}

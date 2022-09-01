@@ -52,7 +52,20 @@
                     <td><%= a.createdAt.toLocaleDateString() %></td>
                     <td><%= a.content%></td>
                     <td><%= a.rating%></td>
-                    <td><form action="/activities/<%= activity.id %>/editReview" method="GET"><button type="submit">Edit</button></form></td>
+                    <td>
+                        <% if (user && user._id.equals(a.user)) { %>
+                        <form action="/activities/<%= activity.id %>/editReview" method="GET">
+                            <button type="submit">Edit</button>
+                        </form>   
+                        <% } %>
+                    </td>
+                    <td>
+                        <% if (user && user._id.equals(a.user)) { %>
+                          <form action="/reviews/<%= a._id %>?_method=DELETE" method="POST">
+                            <button type="submit">X</button>
+                          </form>
+                        <% } %>
+                      </td>
                 </tr>
 
 <% })  %>

@@ -1,3 +1,4 @@
+const activity = require('../models/activity');
 const Activity = require('../models/activity')
 
 function newReview (req, res) {
@@ -48,9 +49,11 @@ function updateReview (req, res, next) {
 }
 
 
+
 module.exports = {
     newReview,
     addReview,
     editReview,
-    updateReview
+    updateReview,
+    // deleteReview
 }
