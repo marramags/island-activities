@@ -11,7 +11,7 @@
      <a href="/">Home</a>
      <a href="/activities">All Activities</a>
      <% if (user) { %>
-        <a href="/activities/new" <%- title === 'All Movies' ? 'class="active"' : '' %>>Add Activity</a>
+        <a href="/activities/new" <%- title === 'All Activities' ? 'class="active"' : '' %>>Add Activity</a>
         <a href="/logout">LOG OUT</a>
         <% } else { %>
        <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
