@@ -8,11 +8,15 @@
     <title>HI Island Activities</title>
 </head>
 <body>
-     <a href="/">Home</a>
-     <a href="/activities">All Activities</a>
+    <nav>
+     
+     <a class="shaka" href="/"><img class="shaka" src="https://i.imgur.com/d1pOwN8.png" title="source: imgur.com" /></a>
+     <a class="nav-link" href="/">Home</a>
+     <a class="nav-link" href="/activities">All Activities</a>
      <% if (user) { %>
-        <a href="/activities/new" <%- title === 'All Activities' ? 'class="active"' : '' %>>Add Activity</a>
-        <a href="/logout">LOG OUT</a>
+        <a class="nav-link" href="/activities/new" <%- title === 'All Activities' ? 'class="active"' : '' %>>Add Activity</a>
+        <a class="nav-link" href="/logout">LOG OUT</a>
         <% } else { %>
-       <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
+       <a class="nav-link login" href="/auth/google">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
        <% } %>
+    </nav>

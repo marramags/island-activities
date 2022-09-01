@@ -3,12 +3,33 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-a {
-  color: #00B7FF;
+/* nav a {
+  color: white;
+  text-decoration: none;
+
+  float: right;
+  
+} */
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  text-align: right;
 }
 
 .login img {
   height: 30px;
+}
+
+.shaka {
+  width: 100px;
+  object-fit: contain;
+  margin-right: auto;
+}
+
+nav {
+  background-color: #92e0ef;
+  overflow: hidden;
 }
 
 .review-info img {
