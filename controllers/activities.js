@@ -38,22 +38,38 @@ function editActivity (req, res) {
     // })
     Activity.findOne({_id: req.params.id}, function(err, activity){
         if (err || !activity) return res.redirect('/activities');
-        res.render('activities/editActivities', {title: "Edit Activity", activity});
+        res.render('activities/editA', {title: "Edit Activity", activity});
     });
 
 }
 
-function updateActivity(req,res){
+function updateActivity(req, res){
+    console.log(req.body)
     Activity.findOneAndUpdate(
-        {_id: req.params.id}, 
+        {_id: req.params.id}, //criteria
         req.body,
-        {new: true},
+        {new: true}),
+        // console.log("update done!")
         function(err, activity) {
-          if (err || !activity) return res.redirect('/activities');
+        console.log(activity)
+          if (err || !activity) return console.log(err);
           res.redirect(`/activities/${activity._id}`);
         }
-      );
+
+
+
+
+    // const selectedActivity = req.activity;
+    // Activity.findByIdAndUpdate(selectedActivity._id, {activity: req.body.activity},
+    //     function(err, updatedActivity){
+    //         if (err) {
+    //             console.log(err)
+    //         } else {
+    //             console.log('updated user>>>>>>>', updatedActivity)
+    //         }
+    //     })
 }
+
 
 module.exports = {
     activitiesIndex,
@@ -63,5 +79,4 @@ module.exports = {
     deleteActivity,
     editActivity,
     updateActivity
-    
 }

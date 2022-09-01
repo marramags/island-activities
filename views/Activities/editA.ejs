@@ -1,14 +1,14 @@
 <%- include('../partials/header')%>
 <h1>Edit Activity</h1>
-<form action="/activities/<%= activity._id %>?_method=PUT" method=“POST”>
-    <label>Activity Name:
+<form method=“POST” action="/activities/<%= activity._id %>?_method=PUT" >
+    <label>Activity Name:</label>
         <input type="text" name="activityName"></input>
-    </label></br>
-    <label>Description:
+    </br>
+    <label>Description: </label>
         <textarea name="description" rows="4" cols="50">
             </textarea>
-    </label></br>
-    <label>Location
+   </br>
+    <label>Location</label>
         <select type="text" name="location">
             <option style="display:none"></option>
             <option value="North Shore">North Shore</option>
@@ -18,8 +18,8 @@
             <option value="Inland">Inland</option>
             <option value="Waikiki">Waikiki</option>
         </select>
-    </label></br>
-    <label>Activity Type
+    </br>
+    <label>Activity Type</label>
         <select type="text" name="activityType">
             <option style="display:none"></option>
             <option value="Hiking">Hiking</option>
@@ -30,7 +30,7 @@
             <option value="Food">Food</option>
 
         </select>
-    </label></br>
+    </br>
     <input type="submit" value="Edit Activity">
 </form>
 <%- include('../partials/footer')%>

@@ -2,10 +2,10 @@ var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
+var methodOverride = require('method-override');
 
 var session = require('express-session')
 var passport = require('passport');
-var methodOverride = require('method-override');
 var logger = require('morgan');
 require('dotenv').config();
 require('./config/database');
@@ -27,6 +27,8 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(methodOverride('_method')); //mounting methodOverride - middleware
+
 app.use(session({
   secret: process.env.SECRET,
   resave: false,
@@ -39,13 +41,12 @@ app.use(function (req, res, next) { //Oauth - Pass req.user to All Views via res
   next();
 });
 
-app.use(methodOverride('_method')); //mounting methodOverride
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/activities', activitiesRouter);
-app.use('/', reviewsRouter)
+app.use('/reviews', reviewsRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
