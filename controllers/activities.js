@@ -53,12 +53,25 @@ function deleteActivity (req, res) {
 //     });
 // }
 
-function editActivity (req, res) {
-        Activity.findById(req.params.id, function(err, activity){
+function editActivity (req, res) { //bev
+        Activity.findById(req.params.id, function(err, activity){  //this one!!!!
             // if (err || !activity) return res.redirect('/activities');
             res.render('activities/editA', {title: "Edit Activity", activity});
         });
     }
+
+    // Activity.findOne({_id: req.params.id}, function(err, activity) {
+    //     if (err || !activity) return res.redirect('/activity');
+    //     res.render('activities/editA', {model: 'Edit Activities', activity});
+    //   });
+    // }
+
+    // function editActivity (req, res) {
+    //     Activity.findOne(req.params.id, function(err, activity){
+    //         if (err || !activity) return res.redirect('/activities');
+    //         res.render('activities/editA', {title: "Edit Activity", activity});
+    //     });
+    // }
 
 function updateActivity(req, res){  //OG function
     // console.log(req.query)
@@ -84,11 +97,12 @@ function updateActivity(req, res){  //OG function
 
 
     // const selectedActivity = req.activity;
-    Activity.findByIdAndUpdate(req.params.id, req.body,  function(err, activity){
-       console.log(req.body)
-        res.redirect('/activities');
-            }
-        )
+    Activity.findByIdAndUpdate(req.params.id, req.body) 
+        .then(activity=> {
+            console.log(req.body)
+            res.redirect(`/activites/${activity._id}`);
+        })
+        
 }
 
 

@@ -10,17 +10,17 @@ const isLoggedIn = require('../config/auth');
 router.get('/', activitiesCtrl.activitiesIndex); //INDEX: see all activities
 
 //http://localhost:3000/activities/new
-router.get('/new', isLoggedIn, activitiesCtrl.newActivity) // viewing form for add new activity
+router.get('/new', isLoggedIn, activitiesCtrl.newActivity) // NEW viewing form for add new activity
 
 router.post('/', activitiesCtrl.addActivity) //CREATE: add new activity
 
 router.get('/:id', activitiesCtrl.seeMore) //SHOW more details on each activity
 
 // http://localhost:3000/activities/delete	
-router.delete('/:id', activitiesCtrl.deleteActivity)	
+router.delete('/:id', activitiesCtrl.deleteActivity)	//DELETE
 
 // http://localhost:3000/activities/12345/edit
-router.get('/:id/editA', activitiesCtrl.editActivity)	
+router.get('/:id/editA', activitiesCtrl.editActivity)	//get for edit page
 
 // http://localhost:3000/activities/12345
 router.put('/:id/editA', activitiesCtrl.updateActivity)	//edit a single activity - updates activity

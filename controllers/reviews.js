@@ -1,5 +1,5 @@
-const activity = require('../models/activity');
 const Activity = require('../models/activity')
+const Review = require('../models/activity')
 
 function newReview (req, res) {
     res.render('activities/addreview', {title: 'Add Review'}); //rendering a review form
@@ -20,7 +20,7 @@ function addReview (req, res) { //create a review
     })
 }
 
-function editReview (req, res, next) {
+function editReview (req, res) {
 //    Activity.findOne({'reviews.id': req.params.id})
 //     .then(function(activity){
 //         const review = activity.reviews.id(req.params.id);
@@ -31,31 +31,37 @@ function editReview (req, res, next) {
 //     })
 //     }
 
-//     Activity.findOne({'reviews._id': req.params.id}, function(err, activity) {
-//         const review = activity.reviews.id(req.params.id);
-//         res.render('/activities/editReview', {title: "Edit Review", review})
-//     })
-    Activity.findOne({'review': req.review}, function (err, review){
-        res.render('activities/editReview', {title: 'Edit Review', review})
+    Activity.findOne({'reviews._id': req.params.id}, function(err, activity) {
+        const review = activity.reviews.id(req.params.id);
+        res.render('/activities/editReview', {title: "Edit Review", review})
     })
+
+    // console.log(Activity.reviews)
+
+    // console.log(Review)
+    // Review.findOne({'review': req.review}, function (err, review){
+    //     console.log(req.params.id)
+    //     res.render('activities/editReview', {title: 'Edit Review', review})
+    // })
 
 }
 
 function updateReview (req, res, next) {
-    // Activity.findOne({'reviews._id': req.params.id})
-    // .then(function(activity){
-    //     const review = activity.reviews.id(req.params.id);
-    //     review.body = req.body.review;
-    //     activity.save().then(function (){
-    //     res.direct(`/activities/${review.id}`)
-    //     }).catch(function(err){
-    //         return next (err);
-    //     })
-    // })
-        Activity.findByIdAndUpdate(req.params.id, req.body, function(err, activity){
-            console.log(activity)
-            res.redirect(`/activities/${activity._id}`);
-        });
+    // console.log(req.params.id)
+    Activity.findById({'reviews._id': req.params.id})
+    .then(function(activity){
+        const review = activity.reviews.id(req.params.id);
+        review.body = req.body.review;
+        activity.save().then(function (){
+        res.direct(`/activities/${review.id}`)
+        }).catch(function(err){
+            return next (err);
+        })
+    })
+        // Activity.findByIdAndUpdate(req.params.id, req.body, function(err, activity){
+        //     console.log(activity)
+        //     res.redirect(`/activities/${activity._id}`);
+        // });
 
 }
 
