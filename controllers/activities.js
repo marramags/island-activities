@@ -62,7 +62,7 @@ function editActivity (req, res) { //bev
 
     Activity.findOne({_id: req.params.id}, function(err, activity) {
         if (err || !activity) return res.redirect('/activity');
-        res.render('/activities/editA', {title: 'Edit Activities', activity});
+        res.render('activities/editA', {title: 'Edit Activities', activity});
       });
     }
 
