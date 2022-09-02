@@ -14,8 +14,8 @@ This app allows users to:
 #### Add Activity Page
 ![Imgur](https://i.imgur.com/SSbrLCw.png)
 #### See Details Page
-![Details](https://i.imgur.com/QiOVRoh.png)
+![Details](https://i.imgur.com/REoq2Hh.png)
 #### Edit Activity Page
-![Edit Activiity](https://i.imgur.com/Lq7fTxA.png)
+![Edit Activiity](https://i.imgur.com/uaKTfKf.png)
 #### Reviews Section
-![Reviews](https://i.imgur.com/UOpRZdt.png)
+![Reviews](https://i.imgur.com/3m6OV2N.png)
