@@ -19,7 +19,7 @@ router.get('/:id', activitiesCtrl.seeMore) //SHOW more details on each activity
 router.get('/:id/editA', activitiesCtrl.editActivity)	//get for edit page
 
 // http://localhost:3000/activities/12345
-router.put('/:id', activitiesCtrl.updateActivity) //edit a single activity - updates activity
+router.put('/:id/updateActivity', activitiesCtrl.updateActivity) //edit a single activity - updates activity
 
 // http://localhost:3000/activities/delete	
 router.delete('/:id', activitiesCtrl.deleteActivity)	//DELETE
