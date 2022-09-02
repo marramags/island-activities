@@ -19,3 +19,6 @@ This app allows users to:
 ![Edit Activiity](https://i.imgur.com/uaKTfKf.png)
 #### Reviews Section
 ![Reviews](https://i.imgur.com/3m6OV2N.png)
+
+## Links
+
