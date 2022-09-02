@@ -1,14 +1,17 @@
 <%- include('../partials/header')%>
-<h1> Activities List</h1>
-<table>
-    <thead>
+<h1 class="header-center"> Activities List</h1>
+<a class="new-activity" href="/activities/new">+ NEW ACTIVITY</a>
+<table class="index-table">
+    <thead class="index-head">
         <th>Activity</th>
         <th>Description</th>
         <th>Location</th>
         <th>Activity Type</th>
+        <th>Details</th>
+
     </thead>
 
-    <tbody>
+    <tbody class="index-body">
         <% activities.forEach(function(a) {%>
             <tr>
                 <td><%= a.activityName%></td>
@@ -28,5 +31,5 @@
 </table>
 
 
-<a href="/activities/new">add new activity</a>
+
 <%- include('../partials/footer')%>
