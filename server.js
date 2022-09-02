@@ -3,7 +3,6 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 
-const bodyParser = require('body-parser'); //trying something new
 
 var methodOverride = require('method-override');
 var session = require('express-session')
@@ -29,8 +28,6 @@ app.set('view engine', 'ejs');
 app.use(logger('dev'));
 app.use(express.json());
 
-app.use(bodyParser.json()); //trying something new
-app.use(methodOverride('X-HTTP-Method-Override')) //trying something new
 
 
 app.use(express.urlencoded({ extended: false }));
@@ -56,13 +53,7 @@ app.use('/users', usersRouter);
 app.use('/activities', activitiesRouter);
 app.use('/', reviewsRouter)
 
-app.get('/', (req, res, next) => { //trying something new
-  res.send('GET request called');
-})
 
-app.put('/', (req, res, next) => { //trying something new
-  res.send('PUT request called');
-})
 
 
 // catch 404 and forward to error handler

@@ -1,6 +1,6 @@
 <%- include('../partials/header')%>
 <h1>Edit Activity</h1>
-<form action="<%= activity._id %>/updateActivity?_method=PUT" method=“POST” >
+<form action="/activities/<%= activity._id %>?_method=PUT" method=“POST” >
     <label>Activity Name:</label>
         <input value="<%= activity.activityName %>" type="text" name="activityName"></input>
     </br>

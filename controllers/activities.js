@@ -111,7 +111,7 @@ console.log("help")
             {new: true},
             function(err, activity) {
               if (err || !activity) return res.redirect('/activity');
-              res.redirect(`/acivities`);
+              res.redirect(`/acivities/${activity._id}`);
             }
           );
         
