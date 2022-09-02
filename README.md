@@ -49,10 +49,10 @@ I feel like I had a well thought-out plan for this project which helped me stay 
 ##### *BUGS*
 One challenge I faced was bugs and trying to problem solve on how to fix it. One specific challenge is getting the PUT method to work and edit an activity. Currently, the user input is captured by the URL and not shown in the view. I seeked out help from several students and instructors but am still sorting out the problem.
 
-##### Organization
+##### *Organization*
 At first, I didn't know where to start but the HTTP Methods & MVC Chart, lecture ReadMe repos, and previous labs helped me get started. I consistently needed to refer back to my HTTP Methods & MVC Chart so I can follow the steps and complete one CRUD Method at a time
 
-##### Expectations
+##### *Expectations*
 Time and skill level is something I need to continually keep in mind. I have so many ideas for features and design but I must remember the time constraint and how long it would take me to learn/figure it out. 
 
 ### Shout Outs
