@@ -10,12 +10,8 @@ function addReview (req, res) { //create a review
         req.body.user = req.user._id;
         req.body.userName = req.user.name
         req.body.userAvatar = req.user.avatar;
-        // console.log("req.body.user----", req.user._id)
-        // console.log("req.user.name----", req.user.name)
-        // console.log("req.body.userAvatar = ", req.user.avatar);
         activity.reviews.push(req.body);
-        // console.log(activity.reviews)
-        // console.log(req.body.user)
+
 
         activity.save(function(err){
             res.redirect(`/activities/${activity._id}`)
