@@ -72,9 +72,12 @@ li{
   text-decoration: none;
   padding: 0 20px;
   font-size: 20px;
-  text-align: center;
   padding: 0 30px 0 0; 
 } 
+
+.login-link{
+  text-align:right;
+}
 
 .header-center {
   text-align: center;
@@ -88,6 +91,7 @@ li{
 .login img {
   height: 30px;
 }
+
 
 .review-info img {
   border-radius: 50%;

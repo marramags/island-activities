@@ -58,6 +58,13 @@
                      
                         <% } %>
                     </td>
+                    <td>
+                        <% if (user && user._id.equals(a.user)) { %>
+                        <a href="/activities/<%= activity.id %>?_method=DELETE" method="POST"> Delete</a>
+                     
+                        <% } %>
+                    </td>
+                    
                     
                       
                 </tr>

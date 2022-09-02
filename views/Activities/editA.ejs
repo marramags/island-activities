@@ -5,12 +5,12 @@
         <input value="<%= activity.activityName %>" type="text" name="activityName"></input>
     </br>
     <label>Description: </label>
-        <textarea name="description" rows="4" cols="50">
-            </textarea>
+    
+        <textarea value="<%= activity.description%>" type="text" name="description" rows="4" cols="50">
+</textarea>
    </br>
     <label>Location</label>
-        <select type="text" name="location">
-            <option style="display:none"></option>
+        <select value="<%= activity.location %>" type="text" name="location">
             <option value="North Shore">North Shore</option>
             <option value="West Shore">West Shore</option>
             <option value="South Shore">South Shore</option>
@@ -20,8 +20,7 @@
         </select>
     </br>
     <label>Activity Type</label>
-        <select type="text" name="activityType">
-            <option style="display:none"></option>
+        <select value="<%= activity.activityType %>"type="text" name="activityType">
             <option value="Hiking">Hiking</option>
             <option value="Thrilling Adventure">Thrilling Adventure</option>
             <option value="Water Sport">Water Sport</option>
