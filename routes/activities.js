@@ -4,7 +4,7 @@ const activitiesCtrl = require('../controllers/activities');
 const isLoggedIn = require('../config/auth');
 
 // http://localhost:3000/activities/12345
-router.put('/:id', activitiesCtrl.updateActivity) //edit a single activity - updates activity
+router.put('/:id/updateA', activitiesCtrl.updateActivity) //edit a single activity - updates activity
 
 // http://localhost:3000/activities
 router.get('/', activitiesCtrl.activitiesIndex); //INDEX: see all activities
