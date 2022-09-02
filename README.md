@@ -67,7 +67,7 @@ I wouldn't be where I am at now without the great support system from General As
 *   A user profile page to view their contributions (activities/reviews)
 *   A user profile avatar in the navigation bar
 *   Adding pictures for each activity
-*   Abilit to share on social media accounts
+*   Ability to share on social media accounts
 *   A sorting or category feature
 *   Additional activity information ie kid-friendly?
 *   Sign up page without Oath
