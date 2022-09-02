@@ -56,7 +56,7 @@ At first, I didn't know where to start but the HTTP Methods & MVC Chart, lecture
 Time and skill level is something I need to continually keep in mind. I have so many ideas for features and design but I must remember the time constraint and how long it would take me to learn/figure it out. 
 
 ### Shout Outs
-I wouldn't be where I am at now without the great support system from General Assembly and my cohort. My team captain, Nellie, and the intructors were a huge help with trying to problem solve my PUT method bug. The Nellienators and several cohort members were so open to talk through hurdles and share their thought process on how to go about tasks. The technical help is great but the collaboration, comradery, and connection with team is what's pushing me through this journey.
+I wouldn't be where I am at now without the great support system from General Assembly and my cohort. My team captain, Nellie, and the intructors were a huge help with trying to problem solve my PUT method bug. The Nellienators and several cohort members were so open to talk through hurdles and share their thought process on how to go about tasks. The technical help is greatly appreciated but the collaboration, comradery, and connection with team is what's pushing me through this journey.
 
 ## Future Additions:
 *   A user profile page to view their contributions (activities/reviews)
