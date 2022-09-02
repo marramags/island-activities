@@ -22,19 +22,23 @@ This app allows users to:
 ![Reviews](https://i.imgur.com/3m6OV2N.png)
 
 ## Links
-[Heroku](https://island-activities.herokuapp.com/)
+*   [Heroku](https://island-activities.herokuapp.com/)
 
-[Heroku](https://island-activities.herokuapp.com/)
-[Trello](https://trello.com/invite/b/usft6ojZ/e44cd5f92b3938f64d9c0c2b18dbc9a2/ga-p2)
+*   [Trello](https://trello.com/invite/b/usft6ojZ/e44cd5f92b3938f64d9c0c2b18dbc9a2/ga-p2)
 
-[Psuedocode](https://docs.google.com/document/d/1eS_SE7v8cDdNh19wR5wdMVffE-Qg1Kn4OS5bNEI-Y1A/edit?usp=sharing)
+*   [Psuedocode](https://docs.google.com/document/d/1eS_SE7v8cDdNh19wR5wdMVffE-Qg1Kn4OS5bNEI-Y1A/edit?usp=sharing)
 *   [ERD Diagram](https://lucid.app/lucidchart/a2751d3b-bbb5-4462-adcc-177860c6b5ef/edit?view_items=5BaMGswJZ~BP&invitationId=inv_380b6667-db60-4335-9a90-3dda33c624b2#)
 *   [HTTP Methods & MVC Chart](https://docs.google.com/spreadsheets/d/1MfZDiH7cqY4QVjR8R0qHk8KYwMogxLW6KJisblIfzEE/edit?usp=sharing)
 *   [Wireframe](https://whimsical.com/p2-island-activites-9f9grnAYGPGsyzGdVvCRWV)
 
 ## Wins
+I feel like I had a well thought-out plan for this project which helped me stay organized with my thought process and workflow. I practiced the steps of MVC, familiarized myself with Mongo, Mongoose, and EJS. I was able to debug most errors I ran into by going back and forth through the modules and thinking more logically.
 
 ## Challenges
+*BUGS*
+One challenge I faced was bugs and trying to problem solve on how to fix it. One specific challenge is getting the Put method to work and edit an activity. Currently, the user input is captured by the URL and not shown in the view.
+
+At first, I didn't know where to start but the HTTP Methods & MVC Chart, lecture ReadMe repos, and previous labs helped me get started. However, when I ran into bugs I c
 
 ## Technologies Used
 
