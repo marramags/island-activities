@@ -51,6 +51,9 @@ One specific win was getting the PUT method to work to update an activity. My ro
 ##### *BUGS*
 One challenge I faced was bugs and trying to problem solve on how to fix it. One specific challenge is getting the PUT method to work and edit an activity. The user input when editing an activity was captured by the URL and did not display in the view. I seeked out help from several students and instructors, used other resources, and tried adjusting my code but the paths were not linking correctly. 
 
+Heroku Delay
+![Heroku](https://i.imgur.com/fLeJVnQ.png)
+
 ##### *Organization*
 At first, I didn't know where to start but the HTTP Methods & MVC Chart, lecture ReadMe repos, and previous labs helped me get started. I consistently needed to refer back to my HTTP Methods & MVC Chart so I can follow the steps and complete one CRUD Method at a time
 
