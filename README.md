@@ -4,7 +4,7 @@
 
 ## Features
 This app allows users to:
-*   add an island activites to inform other travelers
+*   add island activites to inform other travelers
 *   review and rate the activity
 
 ## App Screenshots
