@@ -10,9 +10,9 @@ This app allows users to:
 #### Homepage
 ![homepage](https://i.imgur.com/wlkcQzp.png)
 #### All Activities Page
-![Index](https://i.imgur.com/40r1g27.png)
+![Index](https://i.imgur.com/nT53LB7.png)
 #### Add Activity Page
-![Imgur](https://i.imgur.com/i9R3Al4.png)
+![Imgur](https://i.imgur.com/SSbrLCw.png)
 #### See Details Page
 ![Details](https://i.imgur.com/QiOVRoh.png)
 #### Edit Activity Page
