@@ -12,8 +12,10 @@ router.get('/', activitiesCtrl.activitiesIndex); //INDEX: see all activities
 //http://localhost:3000/activities/new
 router.get('/new', isLoggedIn, activitiesCtrl.newActivity) // NEW viewing form for add new activity
 
+//http://localhost:3000/activities/
 router.post('/', activitiesCtrl.addActivity) //CREATE: add new activity
 
+//http://localhost:3000/activities/12345/
 router.get('/:id', activitiesCtrl.seeMore) //SHOW more details on each activity
 
 
@@ -26,6 +28,6 @@ router.delete('/:id', activitiesCtrl.deleteActivity)	//DELETE
 
 
 	
-// router.put('/:id', activitiesCtrl.updateActivity)
+
 
 module.exports = router;

@@ -10,7 +10,6 @@ const reviewsSchema = new Schema ({
     user: {type: Schema.Types.ObjectId, ref: 'User'},
     userName: String,
     userAvatar: String
-    // activityId: {type: Schema.Types.ObjectId, ref: 'Activity'}
 }, {
     timestamps: true
 })
@@ -18,7 +17,6 @@ const reviewsSchema = new Schema ({
 const activitiesSchema = new Schema ({
     activityName: String,
     description: String,
-    // kidFriendly: {type: Boolean, default: false},
     activityType: String,
     location: String,
     reviews: [reviewsSchema]

@@ -32,26 +32,6 @@ function deleteActivity (req, res) {
     })
 }
 
-// function editActivity (req, res) { //Original
-//     // res.render('activities/editActivities', {
-//     //     activity: Activity.findByIdAndUpdate(req.params.id)
-//     // })
-//     console.log(req.query)
-//     Activity.findOne({_id: req.params.id}, function(err, activity){
-//         if (err || !activity) return res.redirect('/activities');
-//         res.render('activities/editA', {title: "Edit Activity", activity});
-//     });
-
-// }
-
-// function editActivity (req, res) {
-//     // console.log("calling editActivity");
-//     // console.log(req.query);
-//     Activity.findOne({_id: req.params.id}, function(err, activity){
-//         if (err || !activity) return res.redirect('/activities');
-//         res.render('activities/editA', {title: "Edit Activity", activity});
-//     });
-// }
 
 function editActivity (req, res) {
     Activity.findOne({_id: req.params.id}, function(err, activity) {
