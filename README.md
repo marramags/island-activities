@@ -8,6 +8,6 @@ This app allows users to:
 
 ## App Screenshots
 #### Homepage
-![homepage](https://i.imgur.com/IHaDePH.png)
+![homepage](https://i.imgur.com/wlkcQzp.png)
 
 
