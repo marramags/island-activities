@@ -31,15 +31,39 @@ This app allows users to:
 *   [HTTP Methods & MVC Chart](https://docs.google.com/spreadsheets/d/1MfZDiH7cqY4QVjR8R0qHk8KYwMogxLW6KJisblIfzEE/edit?usp=sharing)
 *   [Wireframe](https://whimsical.com/p2-island-activites-9f9grnAYGPGsyzGdVvCRWV)
 
+## Technologies Used
+*   HTML
+*   CSS
+*   JavaScript
+*   NodeJS
+*   Express
+*   EJS
+*   MongoDB
+*   Mongoose
+*   Google Oauth
+
 ## Wins
 I feel like I had a well thought-out plan for this project which helped me stay organized with my thought process and workflow. I practiced the steps of MVC, familiarized myself with Mongo, Mongoose, and EJS. I was able to debug most errors I ran into by going back and forth through the modules and thinking more logically.
 
 ## Challenges
-*BUGS*
-One challenge I faced was bugs and trying to problem solve on how to fix it. One specific challenge is getting the Put method to work and edit an activity. Currently, the user input is captured by the URL and not shown in the view.
+##### *BUGS*
+One challenge I faced was bugs and trying to problem solve on how to fix it. One specific challenge is getting the PUT method to work and edit an activity. Currently, the user input is captured by the URL and not shown in the view. I seeked out help from several students and instructors but am still sorting out the problem.
 
-At first, I didn't know where to start but the HTTP Methods & MVC Chart, lecture ReadMe repos, and previous labs helped me get started. However, when I ran into bugs I c
+##### Organization
+At first, I didn't know where to start but the HTTP Methods & MVC Chart, lecture ReadMe repos, and previous labs helped me get started. I consistently needed to refer back to my HTTP Methods & MVC Chart so I can follow the steps and complete one CRUD Method at a time
 
-## Technologies Used
+##### Expectations
+Time and skill level is something I need to continually keep in mind. I have so many ideas for features and design but I must remember the time constraint and how long it would take me to learn/figure it out. 
+
+### Shout Outs
+I wouldn't be where I am at now without the great support system from General Assembly and my cohort. My team captain, Nellie, and the intructors were a huge help with trying to problem solve my PUT method bug. The Nellienators and several cohort members were so open to talk through hurdles and share their thought process on how to go about tasks. The technical help is great but the collaboration, comradery, and connection with team is what's pushing me through this journey.
 
 ## Future Additions:
+*   A user profile page to view their contributions (activities/reviews)
+*   A user profile avatar in the navigation bar
+*   Adding pictures for each activity
+*   Abilit to share on social media accounts
+*   A sorting or category feature
+*   Additional activity information ie kid-friendly?
+*   Sign up page without Oath
+*   A modern design and layout
