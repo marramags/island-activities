@@ -102,7 +102,7 @@ function updateActivity(req, res){  //OG function
     //         console.log(req.body)
     //         res.redirect(`/activites/${activity._id}`);
     //     })
-
+console.log("help")
         Activity.findOneAndUpdate(
             {_id: req.params.id},
             // update object with updated properties

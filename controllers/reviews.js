@@ -72,5 +72,5 @@ module.exports = {
     addReview,
     editReview,
     updateReview,
-    // deleteReview
+   
 }

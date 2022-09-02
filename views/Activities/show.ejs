@@ -58,13 +58,8 @@
                      
                         <% } %>
                     </td>
-                    <td>
-                        <% if (user && user._id.equals(a.user)) { %>
-                          <form action="/reviews/<%= a._id %>?_method=DELETE" method="POST">
-                             <type="submit">X</button>
-                          </form>
-                        <% } %>
-                      </td>
+                    
+                      
                 </tr>
 
 <% })  %>

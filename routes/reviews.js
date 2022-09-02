@@ -15,9 +15,7 @@ router.get('/activities/:id/editReview', reviewsCtrl.editReview); //update view 
 
 router.put('/activities/:id/reviews', reviewsCtrl.updateReview)	
 
-	
 
-// router.delete('/:id', reviewsCtrl.deleteReview);
 	
 
 module.exports = router;

@@ -14,14 +14,16 @@ router.post('/', activitiesCtrl.addActivity) //CREATE: add new activity
 
 router.get('/:id', activitiesCtrl.seeMore) //SHOW more details on each activity
 
-// http://localhost:3000/activities/delete	
-router.delete('/:id', activitiesCtrl.deleteActivity)	//DELETE
 
 // http://localhost:3000/activities/12345/edit
 router.get('/:id/editA', activitiesCtrl.editActivity)	//get for edit page
 
 // http://localhost:3000/activities/12345
 router.put('/:id', activitiesCtrl.updateActivity) //edit a single activity - updates activity
+
+// http://localhost:3000/activities/delete	
+router.delete('/:id', activitiesCtrl.deleteActivity)	//DELETE
+
 
 	
 // router.put('/:id', activitiesCtrl.updateActivity)
