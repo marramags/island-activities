@@ -54,30 +54,6 @@ function updateReview (req, res, next) {
         })
     }
 
-
-    // console.log(req.params.id)
-    // Activity.findOne({'reviews._id': req.params.id})
-    // console.log("AR------", Activity.reviews)
-
-    // .then(function(activity){
-    //     const review = activity.reviews.id(req.params.id);
-    //     review.body = req.body.review;
-
-    //     activity.save().then(function (){
-    //     res.direct(`/activities/${review.id}`)
-    //     }).catch(function(err){
-    //         return next (err);
-    //     })
-    // })
-
-
-        // Activity.findByIdAndUpdate(req.params.id, req.body, function(err, activity){
-        //     console.log("AR------", activity.reviews)
-        //     res.redirect(`/activities/${activity._id}/`);
-        // });
-
-
-
  
 
 
