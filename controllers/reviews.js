@@ -25,18 +25,31 @@ function addReview (req, res) { //create a review
 
 function editReview (req, res) {
 
-   Activity.findOne({'reviews.id': req.params.id})
-    .then(function(activity){
-        const review = activity.reviews.id(req.params.id);
-        console.log(activity.reviews);
-        console.log(req.body.user)
-        res.render('activities/editReview', {title: 'edit review', activity, review})
+//    Activity.findOne({'reviews.id': req.params.id}) //OG
+//     .then(function(activity){
+//         const review = activity.reviews.id(req.params.id);
+//         console.log(activity.reviews);
+//         console.log(req.body.user)
+//         res.render('activities/editReview', {title: 'edit review', activity, review})
 
 
-    }).catch(function (err){
-        return next (err);
-    })
-    }
+//     }).catch(function (err){
+//         return next (err);
+//     })
+//     }
+
+    // Activity.findOne({'id': req.params.id})
+    // .then(function(activity){
+    //     const review = activity.reviews.id(review._id.toString() req.params.id);
+    //     console.log(activity.reviews);
+    //     console.log(req.body.user)
+    //     res.render('activities/editReview', {title: 'edit review', activity, review})
+
+
+    // }).catch(function (err){
+    //     return next (err);
+    // })
+    // }
 
     // Activity.findOne({'reviews._id': req.params.id}, function(err, activity) {
     //     const content = activity.content.id(req.params.id);
@@ -51,7 +64,7 @@ function editReview (req, res) {
     //     res.render('activities/editReview', {title: 'Edit Review', review})
     // })
 
-// }
+}
 
 function updateReview (req, res, next) {
         Activity.findById(req.params.id, function (err, activity){

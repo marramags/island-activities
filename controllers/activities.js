@@ -53,70 +53,28 @@ function deleteActivity (req, res) {
 //     });
 // }
 
-function editActivity (req, res) { //bev
-    //     Activity.findById(req.params.id, function(err, activity){  //this one!!!!
-    //         // if (err || !activity) return res.redirect('/activities');
-    //         res.render('activities/editA', {title: "Edit Activity", activity});
-    //     });
-    // }
-
+function editActivity (req, res) {
     Activity.findOne({_id: req.params.id}, function(err, activity) {
         if (err || !activity) return res.redirect('/activity');
         res.render('activities/editA', {title: 'Edit Activities', activity});
       });
-    }
-
-    // function editActivity (req, res) {
-    //     Activity.findOne(req.params.id, function(err, activity){
-    //         if (err || !activity) return res.redirect('/activities');
-    //         res.render('activities/editA', {title: "Edit Activity", activity});
-    //     });
-    // }
-
-function updateActivity(req, res){  //OG function
-    // console.log(req.query)
-    // Activity.findOneAndUpdate(
-    //     {_id: req.params.id}, //criteria
-    //     req.body,
-    //     {new: true}),
-    //     // console.log("update done!")
-    //     function(err, activity) {
-    //     console.log(activity)
-    //       if (err || !activity) return console.log(err);
-    //       res.redirect(`/activities/${activity._id}`);
-    //     }
-
-// function updateActivity(req, res){
-//     Activity.findById(req.params.id, function(err, activity) {
-//         activity.update(req.body, function (err, dive) {
-//             if (err) return res.redirect('/activities')
-//         })
-//           res.redirect('/activities');
-//         })
-    
-    // const selectedActivity = req.activity;
-
-
-    // Activity.findByIdAndUpdate(req.params.id, req.body) 
-    //     .then(activity=> {
-    //         console.log(req.body)
-    //         res.redirect(`/activites/${activity._id}`);
-    //     })
-console.log("help")
-        Activity.findOneAndUpdate(
-            {_id: req.params.id},
-            // update object with updated properties
-            req.body,
-            // options object with new: true to make sure updated doc is returned
-            {new: true},
-            function(err, activity) {
-              if (err || !activity) return res.redirect('/activity');
-              res.redirect(`/acivities/${activity._id}`);
-            }
-          );
-        
 }
+    
 
+function updateActivity(req, res){  
+   console.log("calling update");
+   Activity.findOneAndUpdate(
+    {_id: req.params.id},
+    // update object with updated properties
+    req.body,
+    // options object with new: true to make sure updated doc is returned
+    {new: true},
+    function(err, activity) {
+      if (err || !activity) return res.redirect('/activity');
+      res.redirect(`/activities/${activity._id}`);
+    }
+  );   
+}
 
 module.exports = {
     activitiesIndex,
